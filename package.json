@@ -1,0 +1,22 @@
+{
+  "name": "pol-simon",
+  "version": "1.0.0",
+  "description": "Generative impressionism",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wboykinm/pol-simon.git"
+  },
+  "author": "wboykinm@geosprocket.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wboykinm/pol-simon/issues"
+  },
+  "homepage": "https://github.com/wboykinm/pol-simon#readme",
+  "dependencies": {
+    "node-lyrics": "^1.0.0"
+  }
+}
