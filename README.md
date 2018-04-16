@@ -33,8 +33,15 @@ th train.lua \
 
 ### generate some lyrics
 ```
-# get 10000 lines of crazy:
+# get 10000 characters of crazy:
 th sample.lua -checkpoint cv/checkpoint_5000.t7 -length 10000 -gpu -1 > /home/pol-out.txt
 # (back in the other terminal window:)
 docker cp d55a83d09065:/home/pol-out.txt .
 ```
+
+## Thanks
+- To [Dan Hon](https://medium.com/@hondanhon/i-trained-a-neural-net-to-generate-british-placenames-9460e907e4e9)
+- To [Justin Johnson](https://github.com/jcjohnson/torch-rnn)
+- To [Cristian Baldi](https://github.com/crisbal/docker-torch-rnn)
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
