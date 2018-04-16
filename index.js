@@ -1,7 +1,9 @@
 "use strict"
 
 let lyrics = require('node-lyrics');
-let artist = 'Paul Simon'
+let l = require("lyric-get");
+
+let artist = process.argv[2]
 
 lyrics.getArtist(artist, function(err, data) {
   if (err) {
@@ -14,13 +16,15 @@ lyrics.getArtist(artist, function(err, data) {
     let songList = albumList[i].songs
     for (let s = 0; s < songList.length; s++) {
       // retrieve lyrics for each song
-      lyrics.parseLyrics(artist, songList[s], function(err, p) {
-        console.log(artist + ' - ' + songList[s])
-        if (err) {
-          console.log(err)
+      l.get(artist, songList[s], function(err, res){
+        if (!err) {
+          // get rid of all the blank lines
+          let linesOnly = res.replace(/^\s*$[\n\r]{1,}/gm, '');
+          console.log(linesOnly);
         }
-        console.log(p)
       })
     }
   }
 });
+
+
